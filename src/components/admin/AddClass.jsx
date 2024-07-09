@@ -1,9 +1,12 @@
 import React from 'react'
+import AddData from './AddData'
 
 const AddClass = () => {
   return (
-    <div>AddClass</div>
+    <div>
+      <AddData/>
+    </div>
   )
 }
 
-export default AddClass
+export default AddClass 

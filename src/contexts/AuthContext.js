@@ -13,15 +13,21 @@ export const AuthProvider = ({ children }) => {
     // For simplicity, let's assume email and password are validated correctly
     if (email === 'admin' && password === 'admin') {
       setIsAuthenticated(true);
-      navigate('/admin');
-    } else {
+      navigate('/admin/dashboard');
+    }
+    
+    else if (email === 'teacher' && password === 'teacher') {
+      setIsAuthenticated(true);
+      navigate('/user/quiz');
+    }    
+    else {
       throw new Error('Authentication failed');
     }
   };
 
   const logout = () => {
     setIsAuthenticated(false);
-    navigate('/login'); // Redirect to login page after logout
+    navigate('/admin/login'); // Redirect to login page after logout
   };
 
   return (

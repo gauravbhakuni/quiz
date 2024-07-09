@@ -1,8 +1,8 @@
 // components/Login.js
 import React, { useState } from 'react';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../../contexts/AuthContext.js';
 
-const Login = () => {
+const UserLogin = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [result, setResult] = useState('');
@@ -77,4 +77,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default UserLogin;
